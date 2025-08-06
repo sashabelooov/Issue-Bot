@@ -127,7 +127,7 @@ async def conf(message: Message, state: FSMContext):
             "https://spreadsheets.google.com/feeds",
             "https://www.googleapis.com/auth/drive"
         ]
-        creds = ServiceAccountCredentials.from_json_keyfile_name("creds_example.json", scope)
+        creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
         client = gspread.authorize(creds)
 
         sheet = client.open("Volna_Shikoyatlar_Takliflar").sheet1
